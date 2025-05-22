@@ -53,12 +53,6 @@ This project helps reinforce essential front-end development skills such as:
 - Creating interactive web interfaces using DOM APIs
 - Applying logic to organize and display information efficiently
 
-## 👨‍💻 Team
-
-- Ulisses Ribeiro
-- Levi de Jesus
-- Arthur Ferreira
-
 ## 📂 Repository Structure# 🛒 Online Product Catalog - DOM Manipulation Project
 
 ## Overview
