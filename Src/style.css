@@ -26,6 +26,7 @@ header {
   color: var(--cor-textos);
   background-color: var(--cor-principal);
   transition: background-color 1s;
+  cursor: pointer;
 }
 
 /* Colocamos o transition la em cima pra ele fazer animação passando o mouse e tirando ele */
