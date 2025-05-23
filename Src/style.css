@@ -1,13 +1,7 @@
-
-
-
-*{
-    padding: 0;
+html,body{
+    height: 100%;
     margin: 0;
-    box-sizing: border-box;
-}
-
-html{
+    padding: 0;
     font-family: Poppins;
 }
 
@@ -32,8 +26,9 @@ header:hover{
 main{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 45rem;
+    align-items: flex-start; /* Ajusta o alinhamento para o topo */
+    min-height: calc(100vh - 130px);  /* Ajusta para ocupar a tela menos com o header e footer */
+    padding: 2rem 0;
 }
 
 #containerProdutos{
@@ -42,11 +37,10 @@ main{
     border-radius: 0.5rem;
 }
 .produtos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 20rem;
-    height: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    background-color: #f5f5f5;
     gap: 1rem;
 }
 
@@ -75,4 +69,24 @@ button:hover{
     background-color: rgb(46, 134, 249);
 }
 
+/* Footer fixo ao final */
+footer {
+    background-color: rgb(2, 62, 140);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;  /*Se eu não me engano o fixed tbm serve*/
+    bottom: 0;
+    width: 100%;
+}
+
+footer h4 {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+footer p {
+    color: white;
+    margin-top: 1rem;
+}
 
