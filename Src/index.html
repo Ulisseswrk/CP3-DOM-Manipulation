@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabalho-CP3</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <nav class = "nav-bar">
+            <h1>Seja bem vindo(a) a nossa loja de roupas</h1>
+        </nav>
+    </header >
+    <main>
+        <div class="produtos">
+            <button id="btnListar">Produtos</button>
+            
+            <textarea name="containerProdutos" id="containerProdutos"></textarea>
+
+            <label for="selecionar">Selecione as categorias</label>
+
+            <select name="selectCategoria" id="selectCategoria">
+                <option value="superiores">Superiores</option>
+                <option value="intimas">Roupas Intimas</option>
+                <option value="calcados">Calçados</option>
+            </select>
+        
+            <label for="disponiveis">Somente disponiveis:
+                <input type="checkbox" name="checkbox" id="checkbox">
+            </label>
+            
+            <button class="btnFiltrar" id="btnFiltrar">Filtrar</button>
+        </div>
+    </main>
 </body>
 </html>

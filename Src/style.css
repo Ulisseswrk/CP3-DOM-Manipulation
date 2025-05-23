@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20rem;
+    height: auto;
+}
+
+.disponiveis{
+    font-size: 100px;
+}
+
