@@ -1,3 +1,10 @@
+/* Definindo variaveis com as cores pra facilitar na hora de mudar as cores do site */
+:root{
+    --cor-principal: rgb(1, 62, 143);
+    --cor-hover: rgb(46, 134, 249);
+    --cor-textos: rgb(255, 255, 255);
+}
+
 /* Definindo a altura total e removendo margem, padding e adicionando a fonte*/
 html, body {
   height: 100%;
@@ -16,12 +23,14 @@ body {
 /* Cabeçalho centralizadinho com padding e cor de fundo com transição por conta do hover*/
 header {
   padding: 1rem;
-  background-color: rgb(0, 110, 255);
-  transition: background-color 0.3s;
+  color: var(--cor-textos);
+  background-color: var(--cor-principal);
+  transition: background-color 1s;
 }
+
 /* Colocamos o transition la em cima pra ele fazer animação passando o mouse e tirando ele */
 header:hover {
-  background-color: rgb(0, 174, 255);
+  background-color: var(--cor-hover);
 }
 
 /* Título centralizado*/
@@ -46,7 +55,7 @@ main {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  background-color: #f5f5f5;
+  background-color: var(--cor-textos);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -80,25 +89,30 @@ select {
 /* Botões com cor, padding, com fonte maior e efeito hover */
 button { 
   width: 50%;
-  background-color: rgb(0, 110, 255);
+  background-color: var(--cor-principal);
   padding: 1rem;
   font-size: 1.2rem;
   border: none;
-  color: white;
+  color: var(--cor-textos);
   transition: background-color 0.5s;
   cursor: pointer;
 }
-
+/* Mudando a cor do botão ao passar o mouse*/
 button:hover {
-  background-color: rgb(46, 134, 249);
+  background-color: var(--cor-hover);
 }
 
 /* Footer fixo no final com cor, padding e texto centralizado XD*/
-footer {
-  background-color: rgb(0, 110, 255);
-  color: white;
+footer{
+  background-color: var(--cor-principal);
+  color: var(--cor-textos);
   padding: 20px;
   text-align: center;
+  transition: 1s;
+}
+/* Mudando a cor do footer ao passar o mouse, sem segredo */
+footer:hover{
+  background-color: var(--cor-hover);
 }
 
 /* Título do footer com margem pro espaçamento */
@@ -110,5 +124,9 @@ footer h4 {
 /* Texto do footer com margem em cima */
 footer p {
   margin-top: 1rem;
-  color: white;
+  color: var(--cor-textos);
 }
+footer span{
+    cursor: pointer;
+}
+    
