@@ -118,7 +118,7 @@ This project helps reinforce essential front-end development skills such as:
 📁 src
 ├── index.html
 ├── style.css
-└── script.js
+└── app.js
 📄 README.md
 📄 diagram.png (or .pdf)
 
