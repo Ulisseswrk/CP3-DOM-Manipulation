@@ -50,12 +50,11 @@ botaoListar.addEventListener('click', function(){
 
 // Filtro por categoria
 botaoFiltrar.addEventListener("click", function(event) {
-    event.preventDefault(); // evita que o formulário recarregue a página
+    event.preventDefault();
     container.innerHTML = "";
     let categoriaEscolhida = selectCategoria.value;
     let apenasDisponiveis = checkboxDisponiveis.checked;
     let filtrados = produtos.filter(function(produto) {
-        // Checa se o produto é da categoria e, se necessário, se está disponível
         let mesmaCategoria = produto.categoria === categoriaEscolhida;
         let disponibilidadeOk = !apenasDisponiveis || produto.disponibilidade;
         return mesmaCategoria && disponibilidadeOk;
