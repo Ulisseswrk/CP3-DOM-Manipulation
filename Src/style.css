@@ -21,12 +21,15 @@ h1{
 header{
     padding: 1rem;
     margin-top: -1rem;
-    background-color: rgb(0, 110, 255);
-    transition: 0.3s;
+    background-color: rgb(2, 62, 140);
+    color: rgb(255, 255, 255);
+    transition: 5s;
+    cursor: pointer;
 }
 
 header:hover{
-    background-color: rgb(0, 174, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 110, 255);
 }
 
 main{
@@ -70,9 +73,34 @@ button{
     font-size: 1.2rem;
     transition: 0.5s;
 }
+
 button:hover{
     cursor: pointer;
     background-color: rgb(46, 134, 249);
+}
+
+footer{
+    position: fixed;
+    background-color: rgb(2, 62, 140);
+    color: white;
+    padding: 2.8rem;
+    width: 100%;
+    gap: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h3{
+    color: rgb(2, 62, 140);
+    margin-bottom: 10rem;
+    cursor: pointer;
+}
+
+footer h3:hover{
+    transition: 2s;
+    color: white;
 }
 
 
