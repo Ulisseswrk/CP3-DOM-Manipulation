@@ -1,92 +1,114 @@
-html,body{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Poppins;
+/* Definindo a altura total e removendo margem, padding e adicionando a fonte*/
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    font-size: 2rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
+/* Flex e Flex direction pra deixar tudo em colunas*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header{
-    padding: 1rem;
-    margin-top: -1rem;
-    background-color: rgb(0, 110, 255);
-    transition: 0.3s;
+/* Cabeçalho centralizadinho com padding e cor de fundo com transição por conta do hover*/
+header {
+  padding: 1rem;
+  background-color: rgb(0, 110, 255);
+  transition: background-color 0.3s;
+}
+/* Colocamos o transition la em cima pra ele fazer animação passando o mouse e tirando ele */
+header:hover {
+  background-color: rgb(0, 174, 255);
 }
 
-header:hover{
-    background-color: rgb(0, 174, 255);
+/* Título centralizado*/
+h1 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center; /* Usar text-align ao invés de flex */
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Ajusta o alinhamento para o topo */
-    min-height: calc(100vh - 130px);  /* Ajusta para ocupar a tela menos com o header e footer */
-    padding: 2rem 0;
+/* Cria o espaço pro footer ficar la embaixo */
+main {
+  flex: 1;
+  padding-bottom: 4rem;
 }
 
-#containerProdutos{
-    border: 1px solid black;
-    padding: 2rem;
-    border-radius: 0.5rem;
-}
-.produtos{
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    background-color: #f5f5f5;
-    gap: 1rem;
-}
-
-.disponiveis{
-    font-size: 1rem;
-    cursor: pointer;
+/* Container dos produtos espacado certinho*/
+.produtos {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.selecionar, .disponiveis{
-    font-size: 1.2rem;
+/* Caixa dos produtos com borda redonda */
+#containerProdutos {
+  width: 46.5%;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
-select{
-    font-size: large;
-    cursor: pointer;
+/* Labels com tamanho de fonte maior e mudando o cursor */
+.selecionar, .disponiveis {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-button{
-    background-color: rgb(0, 110, 255);
-    padding: 1rem;
-    font-size: 1.2rem;
-    transition: 0.5s;
-}
-button:hover{
-    cursor: pointer;
-    background-color: rgb(46, 134, 249);
+/* Regulando o tamanho da nossa label dos disponiveis */
+.disponiveis {
+  font-size: 1rem;
 }
 
-/* Footer fixo ao final */
+/* Select estilizado com o cursor pointer */
+select {
+  font-size: large;
+  cursor: pointer;
+}
+
+/* Botões com cor, padding, com fonte maior e efeito hover */
+button { 
+  width: 50%;
+  background-color: rgb(0, 110, 255);
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(46, 134, 249);
+}
+
+/* Footer fixo no final com cor, padding e texto centralizado XD*/
 footer {
-    background-color: rgb(2, 62, 140);
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    position: relative;  /*Se eu não me engano o fixed tbm serve*/
-    bottom: 0;
-    width: 100%;
+  background-color: rgb(0, 110, 255);
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
+/* Título do footer com margem pro espaçamento */
 footer h4 {
-    margin: 1rem;
-    cursor: pointer;
+  margin: 1rem 0;
+  cursor: pointer;
 }
 
+/* Texto do footer com margem em cima */
 footer p {
-    color: white;
-    margin-top: 1rem;
+  margin-top: 1rem;
+  color: white;
 }
-
