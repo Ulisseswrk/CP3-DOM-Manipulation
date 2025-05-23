@@ -15,12 +15,15 @@ let produtos = [
 //Constantes
 let container = document.getElementById("containerProdutos");
 let botaoListar = document.getElementById("btnListar");
+let botaoFiltrar = document.getElementById("btnFiltrar");
+let selectCategoria = document.getElementById("selectCategoria");
+let checkboxDisponiveis = document.getElementById("checkbox");
 
 //deixa limpo antes de mostrar
 botaoListar.addEventListener('click', function(){
     container.innerHTML = "";
 
-
+//mostra os produtos
     produtos.forEach(function(produtos) {
         let div = document.createElement("div");
         div.classList.add("produto");
@@ -40,6 +43,39 @@ botaoListar.addEventListener('click', function(){
         else {
             disponibilidade.textContent = "Indisponível";
         }
+        div.appendChild(disponibilidade);
+        container.appendChild(div);
+    });
+});
+
+// Filtro por categoria
+botaoFiltrar.addEventListener("click", function(event) {
+    event.preventDefault(); // evita que o formulário recarregue a página
+    container.innerHTML = "";
+    let categoriaEscolhida = selectCategoria.value;
+    let apenasDisponiveis = checkboxDisponiveis.checked;
+    let filtrados = produtos.filter(function(produto) {
+        // Checa se o produto é da categoria e, se necessário, se está disponível
+        let mesmaCategoria = produto.categoria === categoriaEscolhida;
+        let disponibilidadeOk = !apenasDisponiveis || produto.disponibilidade;
+        return mesmaCategoria && disponibilidadeOk;
+    });
+
+    // Exibir os produtos filtrados
+    filtrados.forEach(function(produto) {
+        let div = document.createElement("div");
+        div.classList.add("produto");
+        let nome = document.createElement("h3");
+        nome.textContent = produto.nome;
+        div.appendChild(nome);
+        let preco = document.createElement("p");
+        preco.textContent = "Preço: R$ " + produto.preco.toFixed(2);
+        div.appendChild(preco);
+        let categoria = document.createElement("p");
+        categoria.textContent = "Categoria: " + produto.categoria;
+        div.appendChild(categoria);
+        let disponibilidade = document.createElement("p");
+        disponibilidade.textContent = produto.disponibilidade ? "Disponível" : "Indisponível";
         div.appendChild(disponibilidade);
         container.appendChild(div);
     });
